@@ -64,7 +64,8 @@ void main( void ) {
 	gl_FragColor = vec4(fract(-log(s)*10.),fract(-log(s)*1.),fract(-log(s)/10.),1.);
 }"""
 
-e = EGL(alpha_flags=1<<16) # fullscreen, RGBA, alpha-PREMULT flag on
+# fullscreen, alpha fixed for all pixels, PREMULT flag on
+e = EGL(alpha_flags=1+1<<16, alpha_opacity=128)
 #e=EGL(pref_width = 640, pref_height=480)
 
 surface_tris = eglfloats( (  - 1.0, - 1.0, 1.0, 

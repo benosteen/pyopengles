@@ -36,7 +36,7 @@ triangle_vertices = eglfloats(( -0.866, -0.5, 1.0,
 opengles.glClear ( GL_COLOR_BUFFER_BIT )
 
 # Set the Viewport: (NB openegl, not opengles)
-openegl.glViewport(0,0,ctx.width, ctx.height)
+opengles.glViewport(0,0,ctx.width, ctx.height)
 
 # Use the program object
 opengles.glUseProgram ( program )

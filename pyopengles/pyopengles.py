@@ -177,7 +177,7 @@ class EGL(object):
                                   layer, ctypes.byref(dst_rect), 0,
                                   ctypes.byref(src_rect),
                                   DISPMANX_PROTECTION_NONE,
-                                  alpha_s , 0, 0)
+                                  ctypes.byref(alpha_s) , 0, 0)
         bcm.vc_dispmanx_update_submit_sync( dispman_update )
         nativewindow = eglints((dispman_element,width,height));
         nw_p = ctypes.pointer(nativewindow)
